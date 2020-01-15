@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Comatible" content="ie=edge">
+<title>Document</title>
+</head>
+
+<body> 
+
+ 
+
+<h2>JavaScript kalkulator</h2> 
+
+<select id="operatori"> 
+
+<option value="+">Sabiranje</option> 
+
+<option value="-">Oduzimanje</option> 
+
+<option value="*">Mnozenje</option> 
+
+<option value="/">Deljenje</option> 
+
+</select> 
+
+<script> 
+
+function calc() {
+    var br1=parseFloat(document.getElementById('br1').value);
+    var br2=parseFloat(document.getElementById('br2').value);
+    var oper= document.getElementById('operatori').value;
+    if(oper=='+') {
+        document.getElementById('rezultat').value=br1+br2;
+    }
+    if(oper=='-') {
+        document.getElementById('rezultat').value=br1-br2;
+    }
+    if(oper=='/') {
+        document.getElementById('rezultat').value=br1/br2;
+    }
+    if(oper=='*') {
+        document.getElementById('rezultat').value=br1*br2;
+    }
+}
+</script> 
+
+ <input type="text" id="br1" /><br/><br />
+ <input type="text" id="br2" /><br /><br />
+ <button onclick="calc();">=</button>
+ <input type="text" id="rezultat" />
+
+</body> 
+</html>
